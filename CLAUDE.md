@@ -14,7 +14,7 @@ Prototipo web **mobile-first** de una app comunitaria de reporte ambiental georr
 - Next.js (App Router) con TypeScript
 - Tailwind CSS
 - Leaflet (con react-leaflet) para el mapa
-- **Sin backend por ahora**: los datos de ejemplo viven en un archivo JSON dentro del repo
+- **Sin backend por ahora**: los datos de ejemplo viven en `data/reportes.json` y `data/capsulas.json`. Los tipos están en `src/types/index.ts` y los JSON se leen solo desde `src/lib/datos.ts`. Los reportes creados en la app se guardan en el `localStorage` (`src/lib/almacen.ts`); las pantallas obtienen la lista completa con `useReportes()`
 
 ## Reglas del proyecto
 
@@ -24,6 +24,7 @@ Prototipo web **mobile-first** de una app comunitaria de reporte ambiental georr
 - Los datos de ejemplo son ficticios: no usar nombres ni datos de personas reales. En reportes anónimos no se muestra ningún dato del autor.
 - La orientación jurídica es informativa y no reemplaza asesoría legal. No inventar leyes, artículos ni plazos: si no hay una fuente verificada, dejarlo marcado como pendiente.
 - Leaflet usa `window`, que no existe en el servidor: los componentes de mapa deben ser de cliente (`"use client"`) y cargarse con `next/dynamic` y `ssr: false` (esa opción solo se permite desde otro componente de cliente).
+- En cada reporte, `estado` coincide con el último elemento de `historial`, y `fecha` con el primero.
 - No activar `cacheComponents` en `next.config.ts`: rompe el mapa al volver desde otra pantalla (react-leaflet no recrea el mapa).
 - No borrar `README.md`, `LICENSE` ni `.git`.
 

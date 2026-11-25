@@ -1,0 +1,37 @@
+[
+  {
+    "id": "capsula-microbasural",
+    "categoria": "microbasural",
+    "titulo": "¿Por qué importa un microbasural?",
+    "contenido": "Un microbasural es un lugar no autorizado donde se acumula basura, como un sitio eriazo o la orilla de un canal. Puede atraer ratones e insectos, contaminar el suelo y el agua, y aumentar el riesgo de incendios. Suele crecer rápido: cuando un lugar ya se ve sucio, más personas botan ahí sus residuos. Por eso ayuda reportarlo temprano. Al hacerlo, describe qué tipo de residuos ves y si hay personas viviendo cerca. No intentes retirar escombros, jeringas o envases químicos por tu cuenta. En casa puedes ayudar separando residuos y averiguando con tu municipio cómo entregar muebles, escombros o artefactos en desuso.",
+    "duracion": 1
+  },
+  {
+    "id": "capsula-agua",
+    "categoria": "agua",
+    "titulo": "Cada fuga cuenta",
+    "contenido": "El agua dulce es un recurso limitado y Chile ha vivido años de sequía prolongada. Una fuga pequeña que corre día y noche puede perder mucha agua antes de que alguien la note. Si ves una, observa si el agua sale de forma constante, si viene de una cañería, un grifo o un sistema de riego, y desde cuándo ocurre: esos datos ayudan a ubicar el problema. También importa la hora del riego. Regar a pleno sol hace que se evapore más agua; temprano en la mañana o al atardecer se aprovecha mejor. En casa, revisa llaves que gotean y el estanque del baño.",
+    "duracion": 1
+  },
+  {
+    "id": "capsula-aire",
+    "categoria": "aire",
+    "titulo": "El humo que respiramos",
+    "contenido": "El humo contiene partículas muy pequeñas que pueden entrar a los pulmones. Afectan más a niñas, niños, personas mayores y a quienes tienen asma u otras enfermedades respiratorias. Quemar plásticos o basura es especialmente dañino, porque libera sustancias tóxicas. Santiago está rodeado de cerros, y en los meses fríos el aire circula menos, por lo que la contaminación se acumula. Al reportar, anota el horario, el color del humo, el olor y la dirección desde donde viene. No te acerques a la fuente. Si hay un incendio o un riesgo inmediato, llama primero a emergencias: un reporte en esta app no lo reemplaza.",
+    "duracion": 1
+  },
+  {
+    "id": "capsula-arboles",
+    "categoria": "arboles",
+    "titulo": "Los árboles son infraestructura",
+    "contenido": "Los árboles urbanos dan sombra, refrescan las calles, retienen parte del polvo del aire y sirven de refugio para aves e insectos. Una poda excesiva puede debilitarlos: pierden hojas que necesitan para alimentarse y quedan con heridas por donde entran hongos y plagas. Los árboles recién plantados son los más frágiles, porque sus raíces todavía son cortas y necesitan riego, sobre todo en verano. Al reportar, indica si el árbol está seco, dañado o en riesgo de caer, y cuántos árboles están afectados. No podes ni cortes árboles de la calle por tu cuenta: puede ser peligroso y requerir autorización.",
+    "duracion": 1
+  },
+  {
+    "id": "capsula-ruido",
+    "categoria": "ruido",
+    "titulo": "El ruido también contamina",
+    "contenido": "Aunque no se ve, el ruido es una forma de contaminación. La exposición frecuente puede alterar el sueño, dificultar la concentración y aumentar el estrés. También afecta a los animales, que usan el sonido para comunicarse y orientarse. Para que un reporte sea útil, anota de dónde viene el ruido, en qué días y horarios ocurre y cuánto dura. Una aplicación del celular puede darte una idea del volumen, pero no reemplaza una medición oficial. Cuando sea seguro, conversar con quien lo produce puede ayudar, porque a veces no sabe que molesta. Evita los enfrentamientos, especialmente de noche.",
+    "duracion": 1
+  }
+]

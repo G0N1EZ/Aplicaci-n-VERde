@@ -1,9 +1,12 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { CATEGORIAS, ESTADOS, reportes } from "@/lib/reportes";
+import { useReportes } from "@/lib/almacen";
+import { CATEGORIAS, ESTADOS } from "@/lib/categorias";
 
 // Leaflet necesita el navegador, por eso el mapa no se genera en el servidor.
 const Mapa = dynamic(() => import("./Mapa"), {
@@ -16,7 +19,10 @@ const Mapa = dynamic(() => import("./Mapa"), {
 });
 
 export default function PantallaMapa() {
-  const [seleccionadoId, setSeleccionadoId] = useState<string | null>(null);
+  const reportes = useReportes();
+  // Al terminar de crear un reporte se llega con ?reporte=ID y se muestra abierto.
+  const recienCreado = useSearchParams().get("reporte");
+  const [seleccionadoId, setSeleccionadoId] = useState(recienCreado);
   const reporte = reportes.find((r) => r.id === seleccionadoId);
 
   return (
@@ -24,7 +30,7 @@ export default function PantallaMapa() {
       <header className="z-10 bg-green-800 px-5 pb-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] text-white">
         <h1 className="text-2xl font-bold leading-tight">VERde</h1>
         <p className="text-sm text-green-100">
-          {reportes.length} reportes en el Gran Santiago
+          {reportes.length} reportes de la comunidad
         </p>
       </header>
 
@@ -75,19 +81,28 @@ export default function PantallaMapa() {
               >
                 ×
               </button>
-              <p className="flex items-center gap-1.5 text-sm font-semibold text-zinc-700">
+              <h2 className="flex items-center gap-2 text-lg font-bold">
                 <span
                   className="size-3 rounded-full"
                   style={{ backgroundColor: CATEGORIAS[reporte.categoria].color }}
                 />
                 {CATEGORIAS[reporte.categoria].nombre}
-              </p>
-              <h2 className="text-lg font-bold leading-snug">
-                {reporte.titulo}
               </h2>
-              <p className="mt-1 text-sm text-zinc-600">
-                {reporte.descripcion}
-              </p>
+              <div className="mt-1 flex gap-3">
+                {reporte.foto && (
+                  <Image
+                    src={reporte.foto}
+                    alt="Foto del reporte"
+                    width={72}
+                    height={72}
+                    unoptimized
+                    className="size-18 shrink-0 rounded-xl object-cover"
+                  />
+                )}
+                <p className="line-clamp-3 min-w-0 self-start wrap-anywhere text-sm text-zinc-700">
+                  {reporte.descripcion}
+                </p>
+              </div>
               <p className="mt-3 flex flex-wrap items-center gap-2 text-xs text-zinc-600">
                 <span
                   className={`rounded-full px-2.5 py-1 font-semibold ${ESTADOS[reporte.estado].clases}`}
@@ -100,6 +115,7 @@ export default function PantallaMapa() {
                   month: "long",
                   timeZone: "UTC",
                 })}
+                {reporte.anonimo && " · Anónimo"}
               </p>
             </section>
           )}

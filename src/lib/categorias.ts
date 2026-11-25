@@ -1,21 +1,4 @@
-import datos from "@/data/reportes.json";
-
-export type Categoria = "microbasural" | "agua" | "aire" | "arboles" | "ruido";
-export type Estado = "recibido" | "en_revision" | "resuelto";
-
-export type Reporte = {
-  id: string;
-  titulo: string;
-  categoria: Categoria;
-  comuna: string;
-  lat: number;
-  lng: number;
-  descripcion: string;
-  fecha: string; // AAAA-MM-DD
-  estado: Estado;
-  anonimo: boolean;
-  autor: string | null;
-};
+import type { Categoria, Estado } from "@/types";
 
 export const CATEGORIAS: Record<
   Categoria,
@@ -33,5 +16,3 @@ export const ESTADOS: Record<Estado, { nombre: string; clases: string }> = {
   en_revision: { nombre: "En revisión", clases: "bg-amber-100 text-amber-900" },
   resuelto: { nombre: "Resuelto", clases: "bg-green-100 text-green-900" },
 };
-
-export const reportes = datos as Reporte[];
