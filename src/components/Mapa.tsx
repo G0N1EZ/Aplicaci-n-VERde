@@ -13,7 +13,7 @@ function MostrarSeleccionado({ reporte }: { reporte?: Reporte }) {
     if (!reporte) return;
     map.panInside(reporte.ubicacion, {
       paddingTopLeft: [40, 110],
-      paddingBottomRight: [40, 300],
+      paddingBottomRight: [40, 360],
     });
   }, [map, reporte]);
   return null;

@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useReportes } from "@/lib/almacen";
 import { CATEGORIAS, ESTADOS } from "@/lib/categorias";
+import { formatearFecha } from "@/lib/fechas";
 
 // Leaflet necesita el navegador, por eso el mapa no se genera en el servidor.
 const Mapa = dynamic(() => import("./Mapa"), {
@@ -27,11 +28,20 @@ export default function PantallaMapa() {
 
   return (
     <>
-      <header className="z-10 bg-green-800 px-5 pb-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] text-white">
-        <h1 className="text-2xl font-bold leading-tight">VERde</h1>
-        <p className="text-sm text-green-100">
-          {reportes.length} reportes de la comunidad
-        </p>
+      <header className="z-10 flex items-center justify-between gap-3 bg-green-800 px-5 pb-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] text-white">
+        <div>
+          <h1 className="text-2xl font-bold leading-tight">VERde</h1>
+          <p className="text-sm text-green-100">
+            {reportes.length} reportes de la comunidad
+          </p>
+        </div>
+        <Link
+          href="/panel"
+          className="flex min-h-11 shrink-0 items-center rounded-full border-2 border-white px-4 text-sm font-semibold"
+        >
+          Panel
+          <span className="sr-only"> municipal y de juntas de vecinos</span>
+        </Link>
       </header>
 
       <main className="relative min-h-0 flex-1">
@@ -109,14 +119,15 @@ export default function PantallaMapa() {
                 >
                   {ESTADOS[reporte.estado].nombre}
                 </span>
-                {reporte.comuna} ·{" "}
-                {new Date(reporte.fecha).toLocaleDateString("es-CL", {
-                  day: "numeric",
-                  month: "long",
-                  timeZone: "UTC",
-                })}
+                {reporte.comuna} · {formatearFecha(reporte.fecha)}
                 {reporte.anonimo && " · Anónimo"}
               </p>
+              <Link
+                href={`/reporte/${reporte.id}`}
+                className="-mr-8 mt-3 flex min-h-11 items-center justify-center rounded-full border-2 border-green-700 font-bold text-green-800 hover:bg-green-50"
+              >
+                Ver detalle
+              </Link>
             </section>
           )}
         </div>

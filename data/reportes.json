@@ -18,10 +18,19 @@
         "fecha": "2026-11-18"
       },
       {
-        "estado": "en_revision",
+        "estado": "validado",
+        "fecha": "2026-11-19"
+      },
+      {
+        "estado": "derivado",
         "fecha": "2026-11-20"
+      },
+      {
+        "estado": "en_revision",
+        "fecha": "2026-11-22"
       }
-    ]
+    ],
+    "apoyos": 24
   },
   {
     "id": "2",
@@ -41,7 +50,8 @@
         "estado": "recibido",
         "fecha": "2026-11-22"
       }
-    ]
+    ],
+    "apoyos": 3
   },
   {
     "id": "3",
@@ -62,10 +72,19 @@
         "fecha": "2026-11-15"
       },
       {
-        "estado": "en_revision",
+        "estado": "validado",
+        "fecha": "2026-11-16"
+      },
+      {
+        "estado": "derivado",
         "fecha": "2026-11-17"
+      },
+      {
+        "estado": "en_revision",
+        "fecha": "2026-11-19"
       }
-    ]
+    ],
+    "apoyos": 41
   },
   {
     "id": "4",
@@ -86,14 +105,23 @@
         "fecha": "2026-10-30"
       },
       {
-        "estado": "en_revision",
+        "estado": "validado",
+        "fecha": "2026-10-31"
+      },
+      {
+        "estado": "derivado",
         "fecha": "2026-11-03"
+      },
+      {
+        "estado": "en_revision",
+        "fecha": "2026-11-05"
       },
       {
         "estado": "resuelto",
         "fecha": "2026-11-14"
       }
-    ]
+    ],
+    "apoyos": 18
   },
   {
     "id": "5",
@@ -113,7 +141,8 @@
         "estado": "recibido",
         "fecha": "2026-11-23"
       }
-    ]
+    ],
+    "apoyos": 2
   },
   {
     "id": "6",
@@ -126,14 +155,19 @@
     "comuna": "Puente Alto",
     "foto": null,
     "anonimo": true,
-    "estado": "recibido",
+    "estado": "validado",
     "fecha": "2026-11-10",
     "historial": [
       {
         "estado": "recibido",
         "fecha": "2026-11-10"
+      },
+      {
+        "estado": "validado",
+        "fecha": "2026-11-14"
       }
-    ]
+    ],
+    "apoyos": 9
   },
   {
     "id": "7",
@@ -146,7 +180,7 @@
     "comuna": "La Florida",
     "foto": null,
     "anonimo": false,
-    "estado": "en_revision",
+    "estado": "derivado",
     "fecha": "2026-11-20",
     "historial": [
       {
@@ -154,10 +188,15 @@
         "fecha": "2026-11-20"
       },
       {
-        "estado": "en_revision",
+        "estado": "validado",
+        "fecha": "2026-11-21"
+      },
+      {
+        "estado": "derivado",
         "fecha": "2026-11-23"
       }
-    ]
+    ],
+    "apoyos": 15
   },
   {
     "id": "8",
@@ -178,14 +217,23 @@
         "fecha": "2026-11-05"
       },
       {
-        "estado": "en_revision",
+        "estado": "validado",
+        "fecha": "2026-11-06"
+      },
+      {
+        "estado": "derivado",
         "fecha": "2026-11-07"
+      },
+      {
+        "estado": "en_revision",
+        "fecha": "2026-11-10"
       },
       {
         "estado": "resuelto",
         "fecha": "2026-11-19"
       }
-    ]
+    ],
+    "apoyos": 33
   },
   {
     "id": "9",
@@ -198,14 +246,19 @@
     "comuna": "San Bernardo",
     "foto": null,
     "anonimo": false,
-    "estado": "recibido",
+    "estado": "validado",
     "fecha": "2026-11-12",
     "historial": [
       {
         "estado": "recibido",
         "fecha": "2026-11-12"
+      },
+      {
+        "estado": "validado",
+        "fecha": "2026-11-15"
       }
-    ]
+    ],
+    "apoyos": 12
   },
   {
     "id": "10",
@@ -226,9 +279,18 @@
         "fecha": "2026-11-08"
       },
       {
-        "estado": "en_revision",
+        "estado": "validado",
+        "fecha": "2026-11-10"
+      },
+      {
+        "estado": "derivado",
         "fecha": "2026-11-11"
+      },
+      {
+        "estado": "en_revision",
+        "fecha": "2026-11-16"
       }
-    ]
+    ],
+    "apoyos": 20
   }
 ]

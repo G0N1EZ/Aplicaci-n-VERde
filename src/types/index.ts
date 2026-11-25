@@ -3,7 +3,12 @@
 
 export type Categoria = "microbasural" | "agua" | "aire" | "arboles" | "ruido";
 
-export type Estado = "recibido" | "en_revision" | "resuelto";
+export type Estado =
+  | "recibido"
+  | "validado"
+  | "derivado"
+  | "en_revision"
+  | "resuelto";
 
 export type Ubicacion = {
   lat: number;
@@ -26,6 +31,7 @@ export type Reporte = {
   estado: Estado; // el actual: debe coincidir con el último del historial
   fecha: string; // AAAA-MM-DD, día en que se creó
   historial: CambioEstado[]; // del más antiguo al más reciente
+  apoyos: number; // sin contar el apoyo de quien usa este navegador
 };
 
 export type Capsula = {

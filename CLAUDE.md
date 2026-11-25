@@ -25,6 +25,8 @@ Prototipo web **mobile-first** de una app comunitaria de reporte ambiental georr
 - La orientación jurídica es informativa y no reemplaza asesoría legal. No inventar leyes, artículos ni plazos: si no hay una fuente verificada, dejarlo marcado como pendiente.
 - Leaflet usa `window`, que no existe en el servidor: los componentes de mapa deben ser de cliente (`"use client"`) y cargarse con `next/dynamic` y `ssr: false` (esa opción solo se permite desde otro componente de cliente).
 - En cada reporte, `estado` coincide con el último elemento de `historial`, y `fecha` con el primero.
+- El formulario de orientación jurídica es simulado: no debe enviar ni guardar datos personales.
+- Los cambios de estado del panel (`/panel`) se guardan aparte en el `localStorage` y se aplican sobre los reportes; los JSON no se modifican. "Respuesta promedio" = días desde Recibido hasta En revisión.
 - No activar `cacheComponents` en `next.config.ts`: rompe el mapa al volver desde otra pantalla (react-leaflet no recrea el mapa).
 - No borrar `README.md`, `LICENSE` ni `.git`.
 

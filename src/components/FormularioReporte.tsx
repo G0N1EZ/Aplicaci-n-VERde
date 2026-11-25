@@ -2,14 +2,15 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { guardarReporte } from "@/lib/almacen";
 import { CATEGORIAS } from "@/lib/categorias";
 import { COMUNAS_RM } from "@/lib/comunas";
+import { hoy } from "@/lib/fechas";
 import { prepararFoto } from "@/lib/foto";
 import type { Categoria, Reporte, Ubicacion } from "@/types";
+import Encabezado from "./Encabezado";
 
 const MapaUbicacion = dynamic(() => import("./MapaUbicacion"), {
   ssr: false,
@@ -25,12 +26,6 @@ const MAX_DESCRIPCION = 500;
 type Errores = Partial<
   Record<"categoria" | "ubicacion" | "comuna" | "descripcion", string>
 >;
-
-// Fecha local en formato AAAA-MM-DD (el formato sueco ya viene así).
-// toISOString() usaría la hora UTC: en Chile, de noche, daría el día siguiente.
-function hoy() {
-  return new Date().toLocaleDateString("sv-SE");
-}
 
 function MensajeError({ id, texto }: { id: string; texto?: string }) {
   if (!texto) return null;
@@ -153,6 +148,7 @@ export default function FormularioReporte() {
       estado: "recibido",
       fecha,
       historial: [{ estado: "recibido", fecha }],
+      apoyos: 0,
     };
 
     if (!guardarReporte(reporte)) {
@@ -169,16 +165,11 @@ export default function FormularioReporte() {
 
   return (
     <>
-      <header className="z-10 flex items-center gap-1 bg-green-800 px-2 pb-2 pt-[calc(env(safe-area-inset-top)+0.5rem)] text-white">
-        <Link
-          href="/"
-          aria-label="Volver al mapa"
-          className="flex size-11 items-center justify-center rounded-full text-2xl"
-        >
-          ←
-        </Link>
-        <h1 className="text-xl font-bold">Crear reporte</h1>
-      </header>
+      <Encabezado
+        titulo="Crear reporte"
+        volverA="/"
+        textoVolver="Volver al mapa"
+      />
 
       <form
         ref={formulario}
