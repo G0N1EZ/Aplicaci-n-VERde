@@ -1,0 +1,40 @@
+{
+  "comoFunciona": [
+    {
+      "titulo": "Sin cuentas",
+      "texto": "La app no pide registrarse. Para reportar no se piden nombre, correo ni teléfono."
+    },
+    {
+      "titulo": "Todo queda en tu navegador",
+      "texto": "Los reportes que creas, tus apoyos y los cambios del panel se guardan solo en este navegador. Se borran si eliminas los datos del sitio."
+    },
+    {
+      "titulo": "Fotos sin datos ocultos",
+      "texto": "Antes de guardar una foto se borra su información oculta, como el GPS o el modelo del celular. Lo que se ve en la imagen no se modifica: evita rostros y patentes."
+    },
+    {
+      "titulo": "Ubicación solo si la pides",
+      "texto": "La app consulta tu ubicación únicamente cuando tocas «Usar mi ubicación». El lugar que marcas en el reporte sí se muestra en el mapa."
+    },
+    {
+      "titulo": "Reporte anónimo",
+      "texto": "El reporte muestra la etiqueta «Anónimo». La categoría, la foto, el lugar, la comuna, la descripción y la fecha siguen visibles."
+    },
+    {
+      "titulo": "Orientación jurídica simulada",
+      "texto": "El formulario no envía ni guarda lo que escribes."
+    },
+    {
+      "titulo": "Servicios externos",
+      "texto": "El mapa usa imágenes de OpenStreetMap y el sitio está publicado en Vercel. Como cualquier servicio web, reciben datos técnicos de tu conexión, como la dirección IP. OpenStreetMap también recibe qué zona del mapa miras."
+    }
+  ],
+  "protocolos": [
+    { "titulo": "Consentimiento informado", "texto": null },
+    { "titulo": "Protección de quien reporta", "texto": null },
+    { "titulo": "Fotos de personas, niñas, niños y adolescentes", "texto": null },
+    { "titulo": "Reportes falsos o malintencionados", "texto": null },
+    { "titulo": "Conservación y eliminación de datos", "texto": null },
+    { "titulo": "Derivación a municipios y clínicas jurídicas", "texto": null }
+  ]
+}

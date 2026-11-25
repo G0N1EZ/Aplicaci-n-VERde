@@ -41,3 +41,26 @@ export type Capsula = {
   contenido: string;
   duracion: number; // minutos de lectura
 };
+
+// --- Páginas institucionales
+
+// Cápsula de la biblioteca (las que grabará el grupo).
+export type CapsulaBiblioteca = {
+  id: string;
+  categoria: Categoria;
+  titulo: string;
+  descripcion: string;
+};
+
+export type EstadoAliado = "ficticio" | "en_conversacion" | "confirmado";
+
+export type GrupoAliados = {
+  grupo: string;
+  rol: string;
+  aliados: { nombre: string; estado: EstadoAliado }[];
+};
+
+export type Privacidad = {
+  comoFunciona: { titulo: string; texto: string }[];
+  protocolos: { titulo: string; texto: string | null }[]; // null = por redactar
+};

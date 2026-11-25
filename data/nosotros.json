@@ -1,0 +1,29 @@
+{
+  "lema": "Transformar avisos en acción",
+  "bajada": "Un reporte vecinal no debería quedar en el aire. VERde lo ubica en el mapa, muestra en qué va y lo acerca a quien puede hacerse cargo.",
+  "mision": "Dar a las comunidades una forma simple de reportar problemas ambientales, aprender sobre ellos y seguir su avance.",
+  "vision": "Un Chile donde cada aviso ambiental de la comunidad recibe una respuesta visible.",
+  "pilares": [
+    {
+      "letra": "V",
+      "nombre": "Visibilizar",
+      "texto": "Mostrar en un mapa los problemas ambientales del barrio."
+    },
+    {
+      "letra": "E",
+      "nombre": "Educar",
+      "texto": "Explicar cada problema con cápsulas breves y claras."
+    },
+    {
+      "letra": "R",
+      "nombre": "Responder",
+      "texto": "Conectar el reporte con JJVV, municipios y orientación jurídica."
+    }
+  ],
+  "valores": [
+    { "nombre": "Transparencia", "texto": "El avance de cada caso está a la vista." },
+    { "nombre": "Colaboración", "texto": "Los problemas comunes se enfrentan en conjunto." },
+    { "nombre": "Respeto", "texto": "Se reportan problemas, no personas." },
+    { "nombre": "Cuidado", "texto": "La seguridad de quien reporta va primero." }
+  ]
+}

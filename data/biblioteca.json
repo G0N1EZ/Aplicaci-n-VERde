@@ -1,0 +1,32 @@
+[
+  {
+    "id": "video-1",
+    "categoria": "microbasural",
+    "titulo": "Cápsula de ejemplo 1",
+    "descripcion": "Texto falso: aquí irá de qué trata la cápsula sobre microbasurales."
+  },
+  {
+    "id": "video-2",
+    "categoria": "agua",
+    "titulo": "Cápsula de ejemplo 2",
+    "descripcion": "Texto falso: aquí irá de qué trata la cápsula sobre agua."
+  },
+  {
+    "id": "video-3",
+    "categoria": "aire",
+    "titulo": "Cápsula de ejemplo 3",
+    "descripcion": "Texto falso: aquí irá de qué trata la cápsula sobre aire."
+  },
+  {
+    "id": "video-4",
+    "categoria": "arboles",
+    "titulo": "Cápsula de ejemplo 4",
+    "descripcion": "Texto falso: aquí irá de qué trata la cápsula sobre árboles."
+  },
+  {
+    "id": "video-5",
+    "categoria": "ruido",
+    "titulo": "Cápsula de ejemplo 5",
+    "descripcion": "Texto falso: aquí irá de qué trata la cápsula sobre ruido."
+  }
+]

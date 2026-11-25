@@ -12,7 +12,7 @@ export default async function Pagina({
   const { id } = await params;
   const { desde } = await searchParams;
   return (
-    <MarcoCelular>
+    <MarcoCelular conBarra>
       <DetalleReporte id={id} desdePanel={desde === "panel"} />
     </MarcoCelular>
   );

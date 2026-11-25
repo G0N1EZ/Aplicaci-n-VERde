@@ -33,7 +33,8 @@ export default function Mapa({
   return (
     <MapContainer
       center={SANTIAGO}
-      zoom={11}
+      // En pantallas bajas se aleja un poco para que quepan todos los pines.
+      zoom={window.innerHeight < 700 ? 10 : 11}
       zoomControl={false}
       attributionControl={false}
       className="h-full w-full"

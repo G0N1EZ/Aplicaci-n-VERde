@@ -7,14 +7,15 @@ Prototipo web **mobile-first** de una app comunitaria de reporte ambiental georr
 1. **Mapa de reportes**: mapa con pines diferenciados por categoría.
 2. **Crear reporte**: foto, categoría, ubicación, descripción y opción de anonimato.
 3. **Detalle del reporte**: estado del caso, cápsula educativa y botón de orientación jurídica.
-4. **Panel para municipio / junta de vecinos**: filtros y estadísticas.
+4. **Panel para municipio / junta de vecinos** (`/panel`): filtros, estadísticas y cambio de estado.
+5. **Páginas institucionales**: Nosotros, Privacidad y seguridad, Aliados, Cápsulas (biblioteca) y Mi actividad, con barra de navegación abajo.
 
 ## Stack
 
 - Next.js (App Router) con TypeScript
 - Tailwind CSS
 - Leaflet (con react-leaflet) para el mapa
-- **Sin backend por ahora**: los datos de ejemplo viven en `data/reportes.json` y `data/capsulas.json`. Los tipos están en `src/types/index.ts` y los JSON se leen solo desde `src/lib/datos.ts`. Los reportes creados en la app se guardan en el `localStorage` (`src/lib/almacen.ts`); las pantallas obtienen la lista completa con `useReportes()`
+- **Sin backend por ahora**: todo el contenido vive en `data/` (ver `data/LEEME.md`). Los tipos están en `src/types/index.ts` y los JSON se leen solo desde `src/lib/datos.ts`. Los reportes creados en la app se guardan en el `localStorage` (`src/lib/almacen.ts`); las pantallas obtienen la lista completa con `useReportes()`
 
 ## Reglas del proyecto
 
@@ -27,6 +28,9 @@ Prototipo web **mobile-first** de una app comunitaria de reporte ambiental georr
 - En cada reporte, `estado` coincide con el último elemento de `historial`, y `fecha` con el primero.
 - El formulario de orientación jurídica es simulado: no debe enviar ni guardar datos personales.
 - Los cambios de estado del panel (`/panel`) se guardan aparte en el `localStorage` y se aplican sobre los reportes; los JSON no se modifican. "Respuesta promedio" = días desde Recibido hasta En revisión.
+- El contenido institucional es un **borrador**: misión, visión, pilares VER, valores, protocolos éticos, aliados y biblioteca de cápsulas se reemplazan con lo que defina el grupo. `data/LEEME.md` dice qué falta. Mantener `<AvisoBorrador>` hasta tener el texto definitivo.
+- `privacidad.json` debe describir lo que la app hace de verdad: actualizarlo si cambia cómo se guardan o envían datos.
+- No mostrar organizaciones reales como aliadas sin confirmación del equipo.
 - No activar `cacheComponents` en `next.config.ts`: rompe el mapa al volver desde otra pantalla (react-leaflet no recrea el mapa).
 - No borrar `README.md`, `LICENSE` ni `.git`.
 

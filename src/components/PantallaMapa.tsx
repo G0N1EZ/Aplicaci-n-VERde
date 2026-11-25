@@ -69,7 +69,7 @@ export default function PantallaMapa() {
           ))}
         </ul>
 
-        <div className="pointer-events-none absolute inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+1.75rem)] z-10 flex flex-col items-end gap-3">
+        <div className="pointer-events-none absolute inset-x-3 bottom-7 z-10 flex flex-col items-end gap-3">
           <Link
             href="/reportar"
             className="pointer-events-auto rounded-full bg-green-700 px-6 py-4 text-base font-bold text-white shadow-lg transition hover:bg-green-800 active:scale-95"

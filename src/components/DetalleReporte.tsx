@@ -47,7 +47,7 @@ export default function DetalleReporte({ id, desdePanel }: Props) {
           </div>
         )}
 
-        <div className="space-y-8 px-5 pb-[calc(env(safe-area-inset-bottom)+2rem)] pt-5">
+        <div className="space-y-8 px-5 pb-8 pt-5">
           <section>
             <h2 className="flex items-center gap-2 text-2xl font-bold">
               <span

@@ -4,7 +4,7 @@ import PantallaMapa from "@/components/PantallaMapa";
 
 export default function Inicio() {
   return (
-    <MarcoCelular>
+    <MarcoCelular conBarra>
       {/* Suspense: Next.js lo exige porque la pantalla lee la dirección (?reporte=) */}
       <Suspense>
         <PantallaMapa />

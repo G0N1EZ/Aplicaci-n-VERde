@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
-import { guardarReporte } from "@/lib/almacen";
+import { crearId, guardarReporte } from "@/lib/almacen";
 import { CATEGORIAS } from "@/lib/categorias";
 import { COMUNAS_RM } from "@/lib/comunas";
 import { hoy } from "@/lib/fechas";
@@ -138,7 +138,7 @@ export default function FormularioReporte() {
 
     const fecha = hoy();
     const reporte: Reporte = {
-      id: `local-${Date.now()}`,
+      id: crearId(),
       categoria,
       descripcion: descripcion.trim(),
       ubicacion,

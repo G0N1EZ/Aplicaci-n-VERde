@@ -13,6 +13,7 @@ import type { CambioEstado, Estado, Reporte } from "@/types";
 const CLAVE = "verde:reportes";
 const CLAVE_APOYOS = "verde:apoyos";
 const CLAVE_HISTORIALES = "verde:historiales"; // { idReporte: historial }
+const PREFIJO_PROPIO = "local-"; // así empiezan los ids creados en la app
 const oyentes = new Set<() => void>();
 
 let ultimoTexto: string | null = null;
@@ -149,6 +150,15 @@ export function useReportes() {
     obtenerLista,
     () => reportesDeEjemplo, // en el servidor no hay localStorage
   );
+}
+
+export function crearId() {
+  return `${PREFIJO_PROPIO}${Date.now()}`;
+}
+
+/** true si el reporte se creó en este navegador. */
+export function esPropio(id: string) {
+  return id.startsWith(PREFIJO_PROPIO);
 }
 
 /** false en el servidor y al cargar; true cuando ya se puede leer el navegador. */

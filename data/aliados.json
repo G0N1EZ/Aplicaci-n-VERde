@@ -1,0 +1,32 @@
+[
+  {
+    "grupo": "Municipios",
+    "rol": "Reciben los reportes y actualizan su estado desde el panel.",
+    "aliados": [
+      { "nombre": "Municipio Ejemplo Norte", "estado": "ficticio" },
+      { "nombre": "Municipio Ejemplo Sur", "estado": "ficticio" }
+    ]
+  },
+  {
+    "grupo": "Clínicas jurídicas",
+    "rol": "Orientan a las personas sobre qué opciones tienen.",
+    "aliados": [
+      { "nombre": "Clínica Jurídica Ejemplo", "estado": "ficticio" }
+    ]
+  },
+  {
+    "grupo": "Juntas de vecinos",
+    "rol": "Validan los reportes y los acercan al municipio.",
+    "aliados": [
+      { "nombre": "JJVV Barrio Ejemplo", "estado": "ficticio" },
+      { "nombre": "JJVV Villa Ejemplo", "estado": "ficticio" }
+    ]
+  },
+  {
+    "grupo": "ONG",
+    "rol": "Aportan conocimiento ambiental y revisan las cápsulas.",
+    "aliados": [
+      { "nombre": "ONG Ejemplo Verde", "estado": "ficticio" }
+    ]
+  }
+]
